@@ -1,0 +1,4 @@
+$('#movies')
+  .html('<%= j render(@search.movies) %>');
+$('.pagination a').attr('data-remote', 'true');
+$("#movies-paging").html('<%= will_paginate @search.movies %>')

@@ -23,6 +23,9 @@ en:
   daily: "Daily"
   weekly: "Weekly"
   monthly: "Monthly"
+  search_result:
+    one: "%{count} result for %{term}"
+    other: "%{count} results for %{term}"
 
   # Just for static pages, get data for each language from database later.
   movie:
@@ -52,10 +55,19 @@ en:
     vocabularies: "Vocabularies"
     conversation: "Conversation"
   filter:
+    name: "Filter"
     level: "By level..."
     genre: "By genre..."
-    newst: "Newest..."
+    newst: "Sort by..."
     category: "By category..."
+  sort_column:
+    feature: "Features"
+    newest: "Newest"
+    views: "Mosted views"
+  filter_reset: "Reset filter"
+  result:
+    one: "%{count} result"
+    other: "%{count} results"
 
   admin:
     views:
@@ -74,7 +86,7 @@ en:
           info_footer: "Project 1 - Learn English through movies"
       static_pages:
         home:
-          dashboard: "Dashboard"
+          page_heading: "Dashboard"
         statistical:
           count: "%{count}"
           new: "New %{name}"
@@ -103,3 +115,21 @@ en:
             phone: "Phone"
             comments: "Total comments"
             suggests: "Total suggests"
+      movies:
+        page_heading: "Movies"
+        title: "Name"
+        cate: "Categories"
+        genres: "Genres"
+        episodes: "Episodes"
+        views: "Views"
+        rating: "Rating"
+        tool: "Tool"
+        not_found: "No movies found matching the above keywords"
+        filter_category: "By Category"
+        filter_level: "By Level"
+        filter_genre: "By Genre"
+        filter_sort: "Sort by"
+    submit:
+      movie:
+        search: "Search"
+        filter: "Filter"

@@ -49,3 +49,9 @@ end
                 rating: Faker::Number.decimal(2),
                 views: Faker::Number.number(3))
 end
+
+# Seed data to genres_movies table
+movies = Movie.all
+movies.each do |movie|
+  movie.genres << Genre.find_or_create_by(id: Faker::Number.between(1, 5))
+end

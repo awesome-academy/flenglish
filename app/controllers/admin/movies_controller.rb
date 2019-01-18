@@ -1,13 +1,5 @@
-class MoviesController < ApplicationController
-  def show; end
-
-  # render to json for autocomplete search
-  def movies
-    @movies = Movie.term params[:term]
-    render json: @movies.select(:title_en, :title_vi)
-  end
-
-  def search
+class Admin::MoviesController < Admin::BaseController
+  def index
     @search = Search.new
     search_params = params.slice :term, :level, :genre, :category, :column_sort
     @search.movies = Movie.filter(search_params).paginate(page: params[:page],
